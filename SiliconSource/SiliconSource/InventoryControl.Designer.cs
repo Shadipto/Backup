@@ -35,14 +35,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearch = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.pnlGridView = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pnlGridViewOperations = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.cmbSort = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.pnlGridViewData = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.gdvInventory = new Guna.UI2.WinForms.Guna2DataGridView();
             this.productID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,9 +50,7 @@
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlSearch.SuspendLayout();
-            this.pnlGridView.SuspendLayout();
             this.pnlGridViewOperations.SuspendLayout();
-            this.pnlGridViewData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvInventory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,24 +104,6 @@
             this.pnlSearch.Size = new System.Drawing.Size(1053, 100);
             this.pnlSearch.TabIndex = 7;
             // 
-            // pnlGridView
-            // 
-            this.pnlGridView.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.pnlGridView.BorderRadius = 10;
-            this.pnlGridView.BorderThickness = 2;
-            this.pnlGridView.Controls.Add(this.pnlGridViewOperations);
-            this.pnlGridView.Controls.Add(this.pnlGridViewData);
-            this.pnlGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlGridView.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlGridView.FillColor2 = System.Drawing.Color.WhiteSmoke;
-            this.pnlGridView.FillColor3 = System.Drawing.Color.WhiteSmoke;
-            this.pnlGridView.FillColor4 = System.Drawing.Color.WhiteSmoke;
-            this.pnlGridView.Location = new System.Drawing.Point(0, 100);
-            this.pnlGridView.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlGridView.Name = "pnlGridView";
-            this.pnlGridView.Size = new System.Drawing.Size(1053, 490);
-            this.pnlGridView.TabIndex = 8;
-            // 
             // pnlGridViewOperations
             // 
             this.pnlGridViewOperations.BackColor = System.Drawing.Color.Transparent;
@@ -136,12 +114,11 @@
             this.pnlGridViewOperations.Controls.Add(this.btnAdd);
             this.pnlGridViewOperations.Controls.Add(this.cmbSort);
             this.pnlGridViewOperations.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlGridViewOperations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGridViewOperations.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.pnlGridViewOperations.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.pnlGridViewOperations.Location = new System.Drawing.Point(662, 0);
+            this.pnlGridViewOperations.Location = new System.Drawing.Point(788, 100);
             this.pnlGridViewOperations.Name = "pnlGridViewOperations";
-            this.pnlGridViewOperations.Size = new System.Drawing.Size(391, 490);
+            this.pnlGridViewOperations.Size = new System.Drawing.Size(262, 490);
             this.pnlGridViewOperations.TabIndex = 1;
             // 
             // btnPrint
@@ -207,7 +184,7 @@
             this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDelete.FillColor = System.Drawing.Color.DarkRed;
             this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.FillColor = System.Drawing.Color.White;
@@ -232,7 +209,7 @@
             this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdd.FillColor = System.Drawing.Color.Green;
             this.btnAdd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.HoverState.FillColor = System.Drawing.Color.White;
@@ -269,19 +246,6 @@
             this.cmbSort.StartIndex = 1;
             this.cmbSort.TabIndex = 0;
             this.cmbSort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pnlGridViewData
-            // 
-            this.pnlGridViewData.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlGridViewData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.pnlGridViewData.BorderRadius = 10;
-            this.pnlGridViewData.BorderThickness = 2;
-            this.pnlGridViewData.Controls.Add(this.gdvInventory);
-            this.pnlGridViewData.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlGridViewData.Location = new System.Drawing.Point(0, 0);
-            this.pnlGridViewData.Name = "pnlGridViewData";
-            this.pnlGridViewData.Size = new System.Drawing.Size(662, 490);
-            this.pnlGridViewData.TabIndex = 0;
             // 
             // gdvInventory
             // 
@@ -322,7 +286,7 @@
             this.gdvInventory.DefaultCellStyle = dataGridViewCellStyle3;
             this.gdvInventory.Dock = System.Windows.Forms.DockStyle.Left;
             this.gdvInventory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gdvInventory.Location = new System.Drawing.Point(0, 0);
+            this.gdvInventory.Location = new System.Drawing.Point(0, 100);
             this.gdvInventory.Name = "gdvInventory";
             this.gdvInventory.ReadOnly = true;
             this.gdvInventory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -336,8 +300,8 @@
             this.gdvInventory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gdvInventory.RowHeadersVisible = false;
             this.gdvInventory.RowTemplate.Height = 25;
-            this.gdvInventory.Size = new System.Drawing.Size(662, 490);
-            this.gdvInventory.TabIndex = 0;
+            this.gdvInventory.Size = new System.Drawing.Size(785, 490);
+            this.gdvInventory.TabIndex = 11;
             this.gdvInventory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.Silver;
             this.gdvInventory.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gdvInventory.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -420,14 +384,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pnlGridView);
+            this.Controls.Add(this.gdvInventory);
+            this.Controls.Add(this.pnlGridViewOperations);
             this.Controls.Add(this.pnlSearch);
             this.Name = "InventoryControl";
             this.Size = new System.Drawing.Size(1053, 590);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.InventoryControl_Paint);
             this.pnlSearch.ResumeLayout(false);
-            this.pnlGridView.ResumeLayout(false);
             this.pnlGridViewOperations.ResumeLayout(false);
-            this.pnlGridViewData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdvInventory)).EndInit();
             this.ResumeLayout(false);
 
@@ -435,21 +399,19 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlSearch;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlGridView;
-        private Guna.UI2.WinForms.Guna2GradientPanel pnlGridViewData;
-        private Guna.UI2.WinForms.Guna2GradientPanel pnlGridViewOperations;
-        private Guna.UI2.WinForms.Guna2DataGridView gdvInventory;
         private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnlGridViewOperations;
+        private Guna.UI2.WinForms.Guna2Button btnPrint;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2ComboBox cmbSort;
+        private Guna.UI2.WinForms.Guna2DataGridView gdvInventory;
         private System.Windows.Forms.DataGridViewTextBoxColumn productID;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
         private System.Windows.Forms.DataGridViewTextBoxColumn category;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn stock;
-        private Guna.UI2.WinForms.Guna2Button btnAdd;
-        private Guna.UI2.WinForms.Guna2Button btnUpdate;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
-        private Guna.UI2.WinForms.Guna2Button btnPrint;
     }
 }

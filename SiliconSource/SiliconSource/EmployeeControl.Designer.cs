@@ -36,18 +36,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearch = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.gdvInventory = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.pnlGridViewOperations = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.cmbSort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.employeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlGridViewOperations = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.cmbSort = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvInventory)).BeginInit();
@@ -157,7 +157,7 @@
             this.gdvInventory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gdvInventory.RowHeadersVisible = false;
             this.gdvInventory.RowTemplate.Height = 25;
-            this.gdvInventory.Size = new System.Drawing.Size(662, 490);
+            this.gdvInventory.Size = new System.Drawing.Size(786, 490);
             this.gdvInventory.TabIndex = 9;
             this.gdvInventory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.Silver;
             this.gdvInventory.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,6 +181,61 @@
             this.gdvInventory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gdvInventory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // employeeID
+            // 
+            this.employeeID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.employeeID.FillWeight = 126.9036F;
+            this.employeeID.Frozen = true;
+            this.employeeID.HeaderText = "Employee ID";
+            this.employeeID.Name = "employeeID";
+            this.employeeID.ReadOnly = true;
+            this.employeeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.employeeID.Width = 90;
+            // 
+            // employeeName
+            // 
+            this.employeeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.employeeName.FillWeight = 329.0299F;
+            this.employeeName.HeaderText = "Employee Name";
+            this.employeeName.Name = "employeeName";
+            this.employeeName.ReadOnly = true;
+            this.employeeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // role
+            // 
+            this.role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.role.FillWeight = 14.68883F;
+            this.role.HeaderText = "Role";
+            this.role.Name = "role";
+            this.role.ReadOnly = true;
+            this.role.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.role.Width = 110;
+            // 
+            // price
+            // 
+            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.price.FillWeight = 14.68883F;
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            this.price.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.price.Width = 90;
+            // 
+            // cost
+            // 
+            this.cost.HeaderText = "Cost";
+            this.cost.Name = "cost";
+            this.cost.ReadOnly = true;
+            // 
+            // stock
+            // 
+            this.stock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.stock.FillWeight = 14.68883F;
+            this.stock.HeaderText = "Stock";
+            this.stock.Name = "stock";
+            this.stock.ReadOnly = true;
+            this.stock.Width = 50;
+            // 
             // pnlGridViewOperations
             // 
             this.pnlGridViewOperations.BackColor = System.Drawing.Color.Transparent;
@@ -194,10 +249,35 @@
             this.pnlGridViewOperations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGridViewOperations.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.pnlGridViewOperations.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.pnlGridViewOperations.Location = new System.Drawing.Point(662, 100);
+            this.pnlGridViewOperations.Location = new System.Drawing.Point(786, 100);
             this.pnlGridViewOperations.Name = "pnlGridViewOperations";
-            this.pnlGridViewOperations.Size = new System.Drawing.Size(391, 490);
+            this.pnlGridViewOperations.Size = new System.Drawing.Size(267, 490);
             this.pnlGridViewOperations.TabIndex = 10;
+            // 
+            // cmbSort
+            // 
+            this.cmbSort.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.cmbSort.BorderRadius = 20;
+            this.cmbSort.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbSort.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSort.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbSort.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.cmbSort.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.cmbSort.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.cmbSort.ItemHeight = 30;
+            this.cmbSort.Items.AddRange(new object[] {
+            "Newest",
+            "Oldest"});
+            this.cmbSort.ItemsAppearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.cmbSort.Location = new System.Drawing.Point(50, 25);
+            this.cmbSort.Name = "cmbSort";
+            this.cmbSort.Size = new System.Drawing.Size(158, 36);
+            this.cmbSort.StartIndex = 0;
+            this.cmbSort.TabIndex = 6;
+            this.cmbSort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnPrint
             // 
@@ -299,86 +379,6 @@
             this.btnAdd.Size = new System.Drawing.Size(158, 45);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add Employee";
-            // 
-            // cmbSort
-            // 
-            this.cmbSort.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.cmbSort.BorderRadius = 20;
-            this.cmbSort.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbSort.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSort.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbSort.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.cmbSort.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.cmbSort.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.cmbSort.ItemHeight = 30;
-            this.cmbSort.Items.AddRange(new object[] {
-            "Newest",
-            "Oldest"});
-            this.cmbSort.ItemsAppearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.cmbSort.Location = new System.Drawing.Point(50, 25);
-            this.cmbSort.Name = "cmbSort";
-            this.cmbSort.Size = new System.Drawing.Size(158, 36);
-            this.cmbSort.StartIndex = 0;
-            this.cmbSort.TabIndex = 6;
-            this.cmbSort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // employeeID
-            // 
-            this.employeeID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.employeeID.FillWeight = 126.9036F;
-            this.employeeID.Frozen = true;
-            this.employeeID.HeaderText = "Employee ID";
-            this.employeeID.Name = "employeeID";
-            this.employeeID.ReadOnly = true;
-            this.employeeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.employeeID.Width = 90;
-            // 
-            // employeeName
-            // 
-            this.employeeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.employeeName.FillWeight = 329.0299F;
-            this.employeeName.HeaderText = "Employee Name";
-            this.employeeName.Name = "employeeName";
-            this.employeeName.ReadOnly = true;
-            this.employeeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // role
-            // 
-            this.role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.role.FillWeight = 14.68883F;
-            this.role.HeaderText = "Role";
-            this.role.Name = "role";
-            this.role.ReadOnly = true;
-            this.role.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.role.Width = 110;
-            // 
-            // price
-            // 
-            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.price.FillWeight = 14.68883F;
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            this.price.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.price.Width = 90;
-            // 
-            // cost
-            // 
-            this.cost.HeaderText = "Cost";
-            this.cost.Name = "cost";
-            this.cost.ReadOnly = true;
-            // 
-            // stock
-            // 
-            this.stock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.stock.FillWeight = 14.68883F;
-            this.stock.HeaderText = "Stock";
-            this.stock.Name = "stock";
-            this.stock.ReadOnly = true;
-            this.stock.Width = 50;
             // 
             // EmployeeControl
             // 

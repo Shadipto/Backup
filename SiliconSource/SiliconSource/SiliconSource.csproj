@@ -52,23 +52,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInventory.Designer.cs">
+      <DependentUpon>AddInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeControl.cs">
+    <Compile Include="ucEmployeeControlAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EmployeeControl.Designer.cs">
-      <DependentUpon>EmployeeControl.cs</DependentUpon>
+    <Compile Include="ucEmployeeControlAdmin.Designer.cs">
+      <DependentUpon>ucEmployeeControlAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventoryControl.cs">
+    <Compile Include="EmployeeDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard.Designer.cs">
+      <DependentUpon>EmployeeDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucInventoryControlAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="InventoryControl.Designer.cs">
-      <DependentUpon>InventoryControl.cs</DependentUpon>
+    <Compile Include="ucInventoryControlAdmin.Designer.cs">
+      <DependentUpon>ucInventoryControlAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,14 +102,56 @@
     <Compile Include="Testing.Designer.cs">
       <DependentUpon>Testing.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucAnslyticsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAnslyticsControl.Designer.cs">
+      <DependentUpon>ucAnslyticsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCart.Designer.cs">
+      <DependentUpon>ucCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucInventoryControlEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucInventoryControlEmployee.Designer.cs">
+      <DependentUpon>ucInventoryControlEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSalesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSalesControl.Designer.cs">
+      <DependentUpon>ucSalesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInventory.Designer.cs">
+      <DependentUpon>UpdateInventory.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddInventory.resx">
+      <DependentUpon>AddInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeControl.resx">
-      <DependentUpon>EmployeeControl.cs</DependentUpon>
+    <EmbeddedResource Include="ucEmployeeControlAdmin.resx">
+      <DependentUpon>ucEmployeeControlAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InventoryControl.resx">
-      <DependentUpon>InventoryControl.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeDashboard.resx">
+      <DependentUpon>EmployeeDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucInventoryControlAdmin.resx">
+      <DependentUpon>ucInventoryControlAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +164,21 @@
     </Compile>
     <EmbeddedResource Include="Testing.resx">
       <DependentUpon>Testing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAnslyticsControl.resx">
+      <DependentUpon>ucAnslyticsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCart.resx">
+      <DependentUpon>ucCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucInventoryControlEmployee.resx">
+      <DependentUpon>ucInventoryControlEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSalesControl.resx">
+      <DependentUpon>ucSalesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInventory.resx">
+      <DependentUpon>UpdateInventory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -112,6 +193,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\checklist.png" />
+    <Content Include="Resources\clouds-upright-2x.png" />
+    <Content Include="Resources\clouds-upright.png" />
+    <Content Include="Resources\inventory.png" />
+    <Content Include="Resources\SiliconSource Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

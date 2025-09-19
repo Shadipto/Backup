@@ -42,7 +42,6 @@
             this.gunaAdminDashboard = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pnlMenu = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.rbtnOffers = new Guna.UI2.WinForms.Guna2Button();
             this.rbtnAnalytics = new Guna.UI2.WinForms.Guna2Button();
             this.rbtnSales = new Guna.UI2.WinForms.Guna2Button();
             this.rbtnEmplyee = new Guna.UI2.WinForms.Guna2Button();
@@ -52,10 +51,8 @@
             this.lblMoto = new System.Windows.Forms.Label();
             this.lblSiliconSource = new System.Windows.Forms.Label();
             this.pboxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.inventoryControl = new SiliconSource.InventoryControl();
             pnlBody = new Guna.UI2.WinForms.Guna2GradientPanel();
             pnlBody.SuspendLayout();
-            this.pnlGrid.SuspendLayout();
             this.pnlHeading.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAdmin)).BeginInit();
             this.pnlMenu.SuspendLayout();
@@ -78,7 +75,7 @@
             pnlBody.ForeColor = System.Drawing.SystemColors.ControlText;
             pnlBody.Location = new System.Drawing.Point(210, 10);
             pnlBody.Name = "pnlBody";
-            pnlBody.Padding = new System.Windows.Forms.Padding(5, 0, 2, 0);
+            pnlBody.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
             pnlBody.Size = new System.Drawing.Size(1060, 700);
             pnlBody.TabIndex = 1;
             // 
@@ -87,8 +84,7 @@
             this.pnlGrid.BackColor = System.Drawing.Color.Transparent;
             this.pnlGrid.BorderColor = System.Drawing.Color.Transparent;
             this.pnlGrid.BorderRadius = 10;
-            this.pnlGrid.Controls.Add(this.inventoryControl);
-            this.pnlGrid.Location = new System.Drawing.Point(5, 106);
+            this.pnlGrid.Location = new System.Drawing.Point(7, 106);
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.Size = new System.Drawing.Size(1053, 590);
             this.pnlGrid.TabIndex = 4;
@@ -109,10 +105,10 @@
             this.pnlHeading.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.pnlHeading.FillColor3 = System.Drawing.Color.WhiteSmoke;
             this.pnlHeading.FillColor4 = System.Drawing.Color.WhiteSmoke;
-            this.pnlHeading.Location = new System.Drawing.Point(5, 0);
+            this.pnlHeading.Location = new System.Drawing.Point(2, 0);
             this.pnlHeading.Name = "pnlHeading";
             this.pnlHeading.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlHeading.Size = new System.Drawing.Size(1053, 100);
+            this.pnlHeading.Size = new System.Drawing.Size(1056, 100);
             this.pnlHeading.TabIndex = 1;
             // 
             // gunaSeperator
@@ -185,7 +181,7 @@
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnExit.HoverState.FillColor = System.Drawing.Color.Black;
             this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1004, 5);
+            this.btnExit.Location = new System.Drawing.Point(1007, 5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(45, 29);
             this.btnExit.TabIndex = 1;
@@ -208,7 +204,6 @@
             this.pnlMenu.BorderRadius = 10;
             this.pnlMenu.BorderThickness = 1;
             this.pnlMenu.Controls.Add(this.btnLogout);
-            this.pnlMenu.Controls.Add(this.rbtnOffers);
             this.pnlMenu.Controls.Add(this.rbtnAnalytics);
             this.pnlMenu.Controls.Add(this.rbtnSales);
             this.pnlMenu.Controls.Add(this.rbtnEmplyee);
@@ -250,35 +245,6 @@
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Logout";
             // 
-            // rbtnOffers
-            // 
-            this.rbtnOffers.Animated = true;
-            this.rbtnOffers.AnimatedGIF = true;
-            this.rbtnOffers.AutoRoundedCorners = true;
-            this.rbtnOffers.BackColor = System.Drawing.Color.Transparent;
-            this.rbtnOffers.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.rbtnOffers.CheckedState.FillColor = System.Drawing.Color.White;
-            this.rbtnOffers.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.rbtnOffers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.rbtnOffers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.rbtnOffers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.rbtnOffers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.rbtnOffers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.rbtnOffers.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnOffers.ForeColor = System.Drawing.Color.White;
-            this.rbtnOffers.HoverState.FillColor = System.Drawing.Color.White;
-            this.rbtnOffers.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.rbtnOffers.Image = ((System.Drawing.Image)(resources.GetObject("rbtnOffers.Image")));
-            this.rbtnOffers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.rbtnOffers.ImageOffset = new System.Drawing.Point(20, 0);
-            this.rbtnOffers.Location = new System.Drawing.Point(9, 540);
-            this.rbtnOffers.Name = "rbtnOffers";
-            this.rbtnOffers.Size = new System.Drawing.Size(180, 45);
-            this.rbtnOffers.TabIndex = 5;
-            this.rbtnOffers.Text = "Offers";
-            this.rbtnOffers.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.rbtnOffers.TextOffset = new System.Drawing.Point(-25, 0);
-            // 
             // rbtnAnalytics
             // 
             this.rbtnAnalytics.Animated = true;
@@ -300,7 +266,7 @@
             this.rbtnAnalytics.Image = ((System.Drawing.Image)(resources.GetObject("rbtnAnalytics.Image")));
             this.rbtnAnalytics.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.rbtnAnalytics.ImageOffset = new System.Drawing.Point(20, 0);
-            this.rbtnAnalytics.Location = new System.Drawing.Point(9, 480);
+            this.rbtnAnalytics.Location = new System.Drawing.Point(9, 545);
             this.rbtnAnalytics.Name = "rbtnAnalytics";
             this.rbtnAnalytics.Size = new System.Drawing.Size(180, 45);
             this.rbtnAnalytics.TabIndex = 4;
@@ -329,7 +295,7 @@
             this.rbtnSales.Image = ((System.Drawing.Image)(resources.GetObject("rbtnSales.Image")));
             this.rbtnSales.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.rbtnSales.ImageOffset = new System.Drawing.Point(20, 0);
-            this.rbtnSales.Location = new System.Drawing.Point(9, 420);
+            this.rbtnSales.Location = new System.Drawing.Point(9, 480);
             this.rbtnSales.Name = "rbtnSales";
             this.rbtnSales.Size = new System.Drawing.Size(180, 45);
             this.rbtnSales.TabIndex = 3;
@@ -358,7 +324,7 @@
             this.rbtnEmplyee.Image = ((System.Drawing.Image)(resources.GetObject("rbtnEmplyee.Image")));
             this.rbtnEmplyee.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.rbtnEmplyee.ImageOffset = new System.Drawing.Point(20, 0);
-            this.rbtnEmplyee.Location = new System.Drawing.Point(9, 360);
+            this.rbtnEmplyee.Location = new System.Drawing.Point(9, 415);
             this.rbtnEmplyee.Name = "rbtnEmplyee";
             this.rbtnEmplyee.Size = new System.Drawing.Size(180, 45);
             this.rbtnEmplyee.TabIndex = 2;
@@ -387,7 +353,7 @@
             this.rbtnInventory.Image = ((System.Drawing.Image)(resources.GetObject("rbtnInventory.Image")));
             this.rbtnInventory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.rbtnInventory.ImageOffset = new System.Drawing.Point(20, 0);
-            this.rbtnInventory.Location = new System.Drawing.Point(9, 300);
+            this.rbtnInventory.Location = new System.Drawing.Point(9, 350);
             this.rbtnInventory.Name = "rbtnInventory";
             this.rbtnInventory.Size = new System.Drawing.Size(180, 45);
             this.rbtnInventory.TabIndex = 2;
@@ -416,7 +382,7 @@
             this.rbtnHome.Image = ((System.Drawing.Image)(resources.GetObject("rbtnHome.Image")));
             this.rbtnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.rbtnHome.ImageOffset = new System.Drawing.Point(20, 0);
-            this.rbtnHome.Location = new System.Drawing.Point(9, 240);
+            this.rbtnHome.Location = new System.Drawing.Point(9, 285);
             this.rbtnHome.Name = "rbtnHome";
             this.rbtnHome.Size = new System.Drawing.Size(180, 45);
             this.rbtnHome.TabIndex = 1;
@@ -476,16 +442,6 @@
             this.pboxLogo.TabStop = false;
             this.pboxLogo.UseTransparentBackground = true;
             // 
-            // inventoryControl
-            // 
-            this.inventoryControl.BackColor = System.Drawing.Color.White;
-            this.inventoryControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inventoryControl.Location = new System.Drawing.Point(0, 0);
-            this.inventoryControl.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.inventoryControl.Name = "inventoryControl";
-            this.inventoryControl.Size = new System.Drawing.Size(1053, 590);
-            this.inventoryControl.TabIndex = 1;
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,7 +458,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             pnlBody.ResumeLayout(false);
-            this.pnlGrid.ResumeLayout(false);
             this.pnlHeading.ResumeLayout(false);
             this.pnlHeading.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAdmin)).EndInit();
@@ -527,7 +482,6 @@
         private Guna.UI2.WinForms.Guna2Button rbtnEmplyee;
         private Guna.UI2.WinForms.Guna2Button rbtnSales;
         private Guna.UI2.WinForms.Guna2Button rbtnAnalytics;
-        private Guna.UI2.WinForms.Guna2Button rbtnOffers;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlHeading;
         private Guna.UI2.WinForms.Guna2ControlBox btnExit;
@@ -537,7 +491,6 @@
         private System.Windows.Forms.Label lblAdminName;
         private Guna.UI2.WinForms.Guna2Separator gunaSeperator;
         private Guna.UI2.WinForms.Guna2GradientPanel pnlGrid;
-        private InventoryControl inventoryControl;
     }
 }
 

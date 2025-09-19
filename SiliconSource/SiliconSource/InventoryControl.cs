@@ -12,10 +12,15 @@ namespace SiliconSource
 {
     public partial class InventoryControl : UserControl
     {
+        
         public InventoryControl()
         {
             InitializeComponent();
         }
 
+        private void InventoryControl_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }
