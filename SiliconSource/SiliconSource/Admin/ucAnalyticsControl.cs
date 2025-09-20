@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace SiliconSource
 {
-    public partial class ucEmployeeControlAdmin : UserControl
+    public partial class ucAnalyticsControl : UserControl
     {
-        public ucEmployeeControlAdmin()
+        public ucAnalyticsControl()
         {
             InitializeComponent();
         }
 
-       
+        
     }
 }
