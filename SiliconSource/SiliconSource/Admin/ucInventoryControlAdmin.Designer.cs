@@ -87,6 +87,7 @@
             txtSearch.Size = new System.Drawing.Size(420, 40);
             txtSearch.TabIndex = 2;
             txtSearch.TextOffset = new System.Drawing.Point(10, 0);
+            
             // 
             // pnlSearch
             // 
@@ -147,6 +148,7 @@
             this.btnPrint.Size = new System.Drawing.Size(158, 45);
             this.btnPrint.TabIndex = 5;
             this.btnPrint.Text = "Print Inventory";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnUpdate
             // 
@@ -172,6 +174,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(158, 45);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -197,6 +200,7 @@
             this.btnDelete.Size = new System.Drawing.Size(158, 45);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete Item";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -324,6 +328,7 @@
             this.gdvInventory.ThemeStyle.RowsStyle.Height = 25;
             this.gdvInventory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gdvInventory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gdvInventory.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.gdvInventory_DataBindingComplete);
             // 
             // productID
             // 
@@ -390,7 +395,6 @@
             this.Controls.Add(this.pnlSearch);
             this.Name = "ucInventoryControlAdmin";
             this.Size = new System.Drawing.Size(1053, 590);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.InventoryControl_Paint);
             this.pnlSearch.ResumeLayout(false);
             this.pnlGridViewOperations.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdvInventory)).EndInit();
