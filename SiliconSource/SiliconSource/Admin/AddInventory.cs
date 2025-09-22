@@ -12,38 +12,85 @@ namespace SiliconSource
 {
     public partial class AddInventory : Form
     {
-        public AddInventory()
+        private Form adminDashboardForm { get; set; } // Reference to the calling UserControl
+        
+        private DataAccess Da { set; get; }
+
+        public AddInventory(Form adminDashboardForm)
         {
             InitializeComponent();
-        }
-
-        private void lblWelcome_Click(object sender, EventArgs e)
-        {
-
+            this.Da = new DataAccess();
+            this.adminDashboardForm = adminDashboardForm;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            DataAccess da = new DataAccess();
-            
-            
             
             string productName = ucProductName.TextboxText;
+
             string category = cmbCategory.Text;
+
             string description = ucDescription.TextboxText;
+
             double price = double.Parse(ucPrice.TextboxText);
+
             double cost = double.Parse(ucCost.TextboxText);
+
             int stockQuantity = int.Parse(ucStockQuantity.TextboxText);
+
             string SKU = ucSKU.TextboxText;
+
             string supplierName = cmbSupplierName.Text;
+
             string queryToFindSuppilerID = $"SELECT [SupplierID] FROM [dbo].[Supplier] WHERE [SupplierName] = '{supplierName}';";
-            DataTable dst = da.ExecuteQueryTable(queryToFindSuppilerID);
+
+
+            DataTable dst = Da.ExecuteQueryTable(queryToFindSuppilerID);
+
             int supplierID = Convert.ToInt32(dst.Rows[0][0]);
-            string insertQuary = "INSERT INTO Product (ProductName, Category, Description, Price, Cost, StockQuantity, SKU, SupplierID)" +
+
+            string insertQuery = "INSERT INTO Product (ProductName, Category, Description, Price, Cost, StockQuantity, SKU, SupplierID)" +
                 $"VALUES ('{productName}', '{category}', '{description}', {price}, {cost}, {stockQuantity}, '{SKU}', {supplierID});";
-            int didItWork = da.ExecuteDMLQuery(insertQuary);
-            MessageBox.Show(didItWork.ToString() );
-            
+
+            int didItWork = Da.ExecuteDMLQuery(insertQuery);
+            if (didItWork > 0)
+            {
+                MessageBox.Show("Update Successful");
+            }
+            else
+            {
+                MessageBox.Show("Update Failed");
+            }
+
+        }
+
+        private void ClearForm()
+        {
+            ucProductName.TextboxText = string.Empty;
+            cmbCategory.SelectedIndex = -1;  // clears selection
+            ucDescription.TextboxText = string.Empty;
+            ucPrice.TextboxText = string.Empty;
+            ucCost.TextboxText = string.Empty;
+            ucStockQuantity.TextboxText = string.Empty;
+            ucSKU.TextboxText = string.Empty;
+            cmbSupplierName.SelectedIndex = -1;  // clears supplier selection
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            this.ClearForm();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            adminDashboardForm.Show();
+
+            if (adminDashboardForm is AdminDashboard dashboard)
+            {
+                dashboard.RefreshInventoryTab();
+            }
         }
     }
 }
