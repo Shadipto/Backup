@@ -12,18 +12,48 @@ namespace SiliconSource
 {
     public partial class AddEmployee : Form
     {
-        private Form adminDashboardForm { get; set; } // Reference to the calling UserControl
+        private Form AdminDashboardForm { get; set; } // Reference to the calling UserControl
         private DataAccess Da { set; get; }
 
         public AddEmployee(Form adminDashboardForm)
         {
             InitializeComponent();
             this.Da = new DataAccess();
-            this.adminDashboardForm = adminDashboardForm;
+            this.AdminDashboardForm = adminDashboardForm;
+        }
+
+
+        internal string GetID()
+        {
+            string quaryToGetLastID = "SELECT COUNT([UserID]) FROM [dbo].[AppUser];";
+            DataTable dt = this.Da.ExecuteQueryTable(quaryToGetLastID);
+            int lastID = int.Parse(dt.Rows[0][0].ToString());
+
+            var roleCodes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+            {
+                {"Admin" , "OWN" },
+                {"Manager" , "MGR" },
+                {"SalesRepresentative" , "SRP" }
+            };
+
+            string roleToAddTheSuffix = roleCodes[cmbRole.Text];
+            return roleToAddTheSuffix + "-" + (++lastID).ToString("D3");
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //var roleCodes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+            //{
+            //    {"Admin" , "OWN" },
+            //    {"Manager" , "MGR" },
+            //    {"SalesRepresentative" , "SRP" }
+            //};
+
+            
+            string userID = this.GetID();
+            
+
             string firstName = ucFirstName.TextboxText;
 
             string lastName = ucLastName.TextboxText;
@@ -33,15 +63,15 @@ namespace SiliconSource
             string password = PasswordHasher.GenerateSHA256Hash(ucPassword.TextboxText);
 
             string role = cmbRole.Text;
-
+            
             double salary = double.Parse(ucSalary.TextboxText);
 
-            string insertQuery = $"INSERT INTO AppUser (UserID, FirstName, LastName, UserName, PasswordHash, Role, Salary)" + $"VALUES ('OWN-TAS', '{firstName}', '{lastName}', '{userName}', '<{password}>', '{role}', {salary});";
+            string insertQuery = $"INSERT INTO AppUser (UserID, FirstName, LastName, UserName, PasswordHash, Role, Salary)" + $"VALUES ('{userID}', '{firstName}', '{lastName}', '{userName}', '<{password}>', '{role}', {salary});";
 
             int didItWork = Da.ExecuteDMLQuery(insertQuery);
             if (didItWork > 0)
             {
-                MessageBox.Show("Update Successful");
+                MessageBox.Show("Update Successful" + " New ID: " + userID);
             }
             else
             {
@@ -69,9 +99,9 @@ namespace SiliconSource
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            adminDashboardForm.Show();
+            AdminDashboardForm.Show();
 
-            if (adminDashboardForm is AdminDashboard dashboard)
+            if (AdminDashboardForm is AdminDashboard dashboard)
             {
                 dashboard.RefreshEmployeeTab();
             }
