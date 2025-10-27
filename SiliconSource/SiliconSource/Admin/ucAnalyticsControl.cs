@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SiliconSource
@@ -32,8 +26,15 @@ namespace SiliconSource
             }
             else
             {
-                dt.DefaultView.RowFilter = $"SalesRepID LIKE '%{searchValue}%'";
+                dt.DefaultView.RowFilter = $"SalesRepID LIKE '%{searchValue}%' OR SalesRepName LIKE '%{searchValue}%'";
             }
+        }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            PDFExporter exporter = new PDFExporter("Analytics.pdf");
+
+            exporter.Export(gdvSalesAnalytics);
         }
     }
 }

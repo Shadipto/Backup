@@ -88,7 +88,14 @@
     <Compile Include="Admin\ucHomeAdmin.Designer.cs">
       <DependentUpon>ucHomeAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="CartSession.cs" />
     <Compile Include="DataAccess.cs" />
+    <Compile Include="Employee\CustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\CustomerDetails.Designer.cs">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\ManagerDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,8 +138,27 @@
     <Compile Include="Login\LoginControl.Designer.cs">
       <DependentUpon>LoginControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager\ucHomeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\ucHomeManager.Designer.cs">
+      <DependentUpon>ucHomeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ucInventoryControlManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\ucInventoryControlManager.Designer.cs">
+      <DependentUpon>ucInventoryControlManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ucSalesControlManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manager\ucSalesControlManager.Designer.cs">
+      <DependentUpon>ucSalesControlManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="PasswordHasher.cs" />
     <Compile Include="PDFExporter.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Admin\ucAnalyticsControl.cs">
@@ -186,6 +212,9 @@
     <EmbeddedResource Include="Admin\ucHomeAdmin.resx">
       <DependentUpon>ucHomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employee\CustomerDetails.resx">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manager\ManagerDashboard.resx">
       <DependentUpon>ManagerDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +235,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\LoginControl.resx">
       <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\ucHomeManager.resx">
+      <DependentUpon>ucHomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\ucInventoryControlManager.resx">
+      <DependentUpon>ucInventoryControlManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\ucSalesControlManager.resx">
+      <DependentUpon>ucSalesControlManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

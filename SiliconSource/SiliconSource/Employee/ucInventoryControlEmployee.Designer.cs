@@ -28,18 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Guna2TextBox txtSearch;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucInventoryControlEmployee));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlSearch = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pnlGridViewOperations = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnGoToCart = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRemove = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddToCart = new Guna.UI2.WinForms.Guna2Button();
-            this.cmbSort = new Guna.UI2.WinForms.Guna2ComboBox();
             this.gdvInventory = new Guna.UI2.WinForms.Guna2DataGridView();
             this.productID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +44,6 @@
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlSearch.SuspendLayout();
             this.pnlGridViewOperations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvInventory)).BeginInit();
@@ -55,44 +51,45 @@
             // 
             // txtSearch
             // 
-            txtSearch.Animated = true;
-            txtSearch.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            txtSearch.BackColor = System.Drawing.Color.Transparent;
-            txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            txtSearch.BorderRadius = 20;
-            txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtSearch.DefaultText = "";
-            txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            txtSearch.DisabledState.FillColor = System.Drawing.Color.WhiteSmoke;
-            txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            txtSearch.FillColor = System.Drawing.Color.WhiteSmoke;
-            txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            txtSearch.FocusedState.FillColor = System.Drawing.Color.WhiteSmoke;
-            txtSearch.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            txtSearch.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            txtSearch.ForeColor = System.Drawing.Color.Black;
-            txtSearch.HideSelection = false;
-            txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            txtSearch.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            txtSearch.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            txtSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconLeft")));
-            txtSearch.IconLeftOffset = new System.Drawing.Point(15, 0);
-            txtSearch.Location = new System.Drawing.Point(26, 30);
-            txtSearch.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            txtSearch.PlaceholderText = "Search...........";
-            txtSearch.SelectedText = "";
-            txtSearch.Size = new System.Drawing.Size(420, 40);
-            txtSearch.TabIndex = 2;
-            txtSearch.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtSearch.Animated = true;
+            this.txtSearch.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.txtSearch.BorderRadius = 20;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.txtSearch.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.txtSearch.FocusedState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearch.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.txtSearch.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.Black;
+            this.txtSearch.HideSelection = false;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.txtSearch.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearch.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.txtSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconLeft")));
+            this.txtSearch.IconLeftOffset = new System.Drawing.Point(15, 0);
+            this.txtSearch.Location = new System.Drawing.Point(26, 30);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.txtSearch.PlaceholderText = "Search...........";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(420, 40);
+            this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // pnlSearch
             // 
             this.pnlSearch.BorderColor = System.Drawing.Color.Transparent;
             this.pnlSearch.BorderRadius = 10;
             this.pnlSearch.BorderThickness = 2;
-            this.pnlSearch.Controls.Add(txtSearch);
+            this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSearch.FillColor = System.Drawing.Color.WhiteSmoke;
             this.pnlSearch.FillColor2 = System.Drawing.Color.WhiteSmoke;
@@ -107,10 +104,7 @@
             // 
             this.pnlGridViewOperations.BackColor = System.Drawing.Color.Transparent;
             this.pnlGridViewOperations.BorderRadius = 10;
-            this.pnlGridViewOperations.Controls.Add(this.btnGoToCart);
-            this.pnlGridViewOperations.Controls.Add(this.btnRemove);
             this.pnlGridViewOperations.Controls.Add(this.btnAddToCart);
-            this.pnlGridViewOperations.Controls.Add(this.cmbSort);
             this.pnlGridViewOperations.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlGridViewOperations.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlGridViewOperations.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -119,57 +113,6 @@
             this.pnlGridViewOperations.Name = "pnlGridViewOperations";
             this.pnlGridViewOperations.Size = new System.Drawing.Size(268, 490);
             this.pnlGridViewOperations.TabIndex = 10;
-            // 
-            // btnGoToCart
-            // 
-            this.btnGoToCart.Animated = true;
-            this.btnGoToCart.AnimatedGIF = true;
-            this.btnGoToCart.AutoRoundedCorners = true;
-            this.btnGoToCart.BackColor = System.Drawing.Color.Transparent;
-            this.btnGoToCart.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnGoToCart.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btnGoToCart.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnGoToCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGoToCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGoToCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGoToCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGoToCart.FillColor = System.Drawing.Color.Green;
-            this.btnGoToCart.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoToCart.ForeColor = System.Drawing.Color.White;
-            this.btnGoToCart.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnGoToCart.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btnGoToCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnGoToCart.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnGoToCart.Location = new System.Drawing.Point(50, 281);
-            this.btnGoToCart.Name = "btnGoToCart";
-            this.btnGoToCart.Size = new System.Drawing.Size(158, 45);
-            this.btnGoToCart.TabIndex = 5;
-            this.btnGoToCart.Text = "Go To Cart";
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Animated = true;
-            this.btnRemove.AnimatedGIF = true;
-            this.btnRemove.AutoRoundedCorners = true;
-            this.btnRemove.BackColor = System.Drawing.Color.Transparent;
-            this.btnRemove.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnRemove.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btnRemove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRemove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRemove.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRemove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRemove.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnRemove.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnRemove.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btnRemove.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRemove.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnRemove.Location = new System.Drawing.Point(50, 230);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(158, 45);
-            this.btnRemove.TabIndex = 3;
-            this.btnRemove.Text = "Remove";
             // 
             // btnAddToCart
             // 
@@ -190,36 +133,12 @@
             this.btnAddToCart.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btnAddToCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddToCart.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnAddToCart.Location = new System.Drawing.Point(50, 179);
+            this.btnAddToCart.Location = new System.Drawing.Point(53, 237);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(158, 45);
             this.btnAddToCart.TabIndex = 2;
             this.btnAddToCart.Text = "Add To Cart";
-            // 
-            // cmbSort
-            // 
-            this.cmbSort.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.cmbSort.BorderRadius = 20;
-            this.cmbSort.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbSort.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSort.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbSort.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.cmbSort.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.cmbSort.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.cmbSort.ItemHeight = 30;
-            this.cmbSort.Items.AddRange(new object[] {
-            "$ Low - High",
-            "$ High - Low"});
-            this.cmbSort.ItemsAppearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.cmbSort.Location = new System.Drawing.Point(50, 25);
-            this.cmbSort.Name = "cmbSort";
-            this.cmbSort.Size = new System.Drawing.Size(158, 36);
-            this.cmbSort.StartIndex = 1;
-            this.cmbSort.TabIndex = 0;
-            this.cmbSort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // gdvInventory
             // 
@@ -373,16 +292,14 @@
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlSearch;
         private Guna.UI2.WinForms.Guna2GradientPanel pnlGridViewOperations;
-        private Guna.UI2.WinForms.Guna2Button btnGoToCart;
-        private Guna.UI2.WinForms.Guna2Button btnRemove;
         private Guna.UI2.WinForms.Guna2Button btnAddToCart;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbSort;
-        private Guna.UI2.WinForms.Guna2DataGridView gdvInventory;
         private System.Windows.Forms.DataGridViewTextBoxColumn productID;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
         private System.Windows.Forms.DataGridViewTextBoxColumn category;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn stock;
+        internal Guna.UI2.WinForms.Guna2DataGridView gdvInventory;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
     }
 }

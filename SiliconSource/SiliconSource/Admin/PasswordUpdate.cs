@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SiliconSource.Admin
@@ -43,20 +36,26 @@ namespace SiliconSource.Admin
 
             else if (newPassword == confirmPassword)
             {
-                string passwordHash = PasswordHasher.GenerateSHA256Hash(newPassword);
-
-                string updateQuery = $"UPDATE AppUser SET PasswordHash = '{passwordHash}' WHERE UserID = '{UserID}';";
-
-                int rowsAffected = Da.ExecuteDMLQuery(updateQuery);
-                if (rowsAffected > 0)
+                try
                 {
-                    MessageBox.Show("Password updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                    UpdateEmployeeForm.Show();
+                    string passwordHash = PasswordHasher.GenerateSHA256Hash(newPassword);
+                    string updateQuery = $"UPDATE AppUser SET PasswordHash = '{passwordHash}' WHERE UserID = '{UserID}';";
+
+                    int rowsAffected = Da.ExecuteDMLQuery(updateQuery);
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Password updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                        UpdateEmployeeForm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to update password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Failed to update password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"An error occurred while updating the password:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
